@@ -1,0 +1,7 @@
+Grupo desempeño = 
+IF('Tabla Evaluacion'[Evaluación] <= 6 , "0 - 6" ,
+IF('Tabla Evaluacion'[Evaluación] <= 7 , "6 - 7" ,
+IF('Tabla Evaluacion'[Evaluación] <= 8 , "7 - 8" ,
+IF('Tabla Evaluacion'[Evaluación] <= 9 , "8 - 9" ,
+"9 - 10" 
+))))
