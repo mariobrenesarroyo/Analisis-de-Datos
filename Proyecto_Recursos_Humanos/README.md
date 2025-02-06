@@ -22,8 +22,22 @@ Las tablas están relacionadas mediante el campo `ID Empleado`, que actúa como 
 
 ## Visualización de hoja de total de empleados
 
-Para esta hoja tendremos indicadores,Tarjetas,Tarjetas, Gráficos de barras apiladas,Mapa, Gráfico de columnas apiladas Y tablas que muestrenlos diferentes datos de nuestros empleados
+Para esta hoja tendremos indicadores, Tarjetas, Gráficos de barras apiladas, Mapa, Gráfico de columnas apiladas y tablas que muestren los diferentes datos de nuestros empleados.
 
 ![Hoja total empleados](./imgs/Hoja_total_empleados.png)
 
-# Estructura de gráfico de barras apiladas
+## Estructura de gráfico de barras apiladas
+
+En el gráfico de la izquierda se analizan los grupos de edad con el total de empleados utilizando la medida DAX de `Grupo_Edad.dax`. En el gráfico del centro, se analiza el sueldo promedio por grupo de sueldo y total de empleados usando las medidas DAX de `Sueldo_promedio.dax` y `Total_empleados.dax`.
+
+### Medidas DAX utilizadas 
+
+- `Edad.dax`: Calcula la edad de los empleados.
+- `Edad_promedio.dax`: Calcula la edad promedio de los empleados.
+- `Evaluación_promedio.dax`: Calcula la evaluación promedio de los empleados.
+- `Grupo_desempeño.dax`: Agrupa los empleados por desempeño.
+- `Grupo_Edad.dax`: Agrupa los empleados por rango de edad.
+- `Sueldo_promedio.dax`: Calcula el sueldo promedio de los empleados.
+- `Total_empleados.dax`: Calcula el total de empleados.
+
+Cada una de estas medidas se utiliza para proporcionar datos más precisos y útiles en los gráficos y tablas del dashboard.
