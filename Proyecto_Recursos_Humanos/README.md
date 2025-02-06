@@ -41,3 +41,5 @@ En el gráfico de la izquierda se analizan los grupos de edad con el total de em
 - `Total_empleados.dax`: Calcula el total de empleados.
 
 Cada una de estas medidas se utiliza para proporcionar datos más precisos y útiles en los gráficos y tablas del dashboard.
+
+![Estructura de gráfico de barras apiladas](./imgs/barras_apiladas_total_empleados.png)
