@@ -1,0 +1,1 @@
+Edad Promedio = AVERAGE('Tabla Empleados'[Edad])

@@ -1,0 +1,8 @@
+Grupo edad = 
+IF('Tabla Empleados'[Edad] <= 30 , "20 - 30",
+IF('Tabla Empleados'[Edad] <= 40 , "30 - 40",
+IF('Tabla Empleados'[Edad] <= 50 , "40 - 50",
+IF('Tabla Empleados'[Edad] <= 60 , "50 - 60",
+IF('Tabla Empleados'[Edad] <= 70 , "60 - 70" , 
+"+ 70"
+)))))

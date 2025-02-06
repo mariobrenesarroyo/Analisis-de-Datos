@@ -1,0 +1,1 @@
+Edad = INT(YEARFRAC('Tabla Empleados'[Nacimiento], TODAY()))
