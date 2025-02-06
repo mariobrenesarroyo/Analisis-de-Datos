@@ -19,3 +19,11 @@ Las tablas están relacionadas mediante el campo `ID Empleado`, que actúa como 
 
 ![Relación de Tablas](./imgs/relacion_de_tablas.png)
 
+
+## Visualización de hoja de total de empleados
+
+Para esta hoja tendremos indicadores,Tarjetas,Tarjetas, Gráficos de barras apiladas,Mapa, Gráfico de columnas apiladas Y tablas que muestrenlos diferentes datos de nuestros empleados
+
+![Hoja total empleados](./imgs/Hoja_total_empleados.png)
+
+# Estructura de gráfico de barras apiladas

@@ -1,0 +1,1 @@
+Sueldo Promedio = AVERAGE('Tabla Sueldo'[Sueldo])
