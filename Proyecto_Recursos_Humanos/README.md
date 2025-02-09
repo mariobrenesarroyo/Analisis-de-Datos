@@ -115,9 +115,11 @@ En el gráfico de filas apiladas tenemos el nombre de cada jefe de departamento 
 
 ## Aplicación de filtros
 aplicamos una configuracion a nuestra matriz en el nombre de empleado
+
 ![Configuraión de nombre de empleado](imgs/configuracionNombreEmpleado.png)
 
 despues de eso hacemos la funcion conrrespondiente
+
 ![Configuraión de nombre de empleado](imgs/colorFondoPorEvaluacion.png)
 
 
