@@ -43,3 +43,23 @@ En el gráfico de la izquierda se analizan los grupos de edad con el total de em
 Cada una de estas medidas se utiliza para proporcionar datos más precisos y útiles en los gráficos y tablas del dashboard.
 
 ![Estructura de gráfico de barras apiladas](./imgs/barras_apiladas_total_empleados.png)
+
+
+## Estructura de gráfico de barras apiladas
+En este gráfico se está mostrando la cantidad de empleados que tenemos y el grupo de departamento al que pertenecen usando como ejes `Total_empleados.dax` y `Departamento`.
+
+
+### Medidas DAX utilizadas 
+- `Total_empleados.dax`: Calcula el total de empleados.
+
+![Estructura de gráfico de barras horizontales](./imgs/barras_horizontales_empleadosDepartamento.png)
+
+
+## Estructura de gráfico de Mapa
+Dentro del mapa se utiliza como ubicación, el estado donde trabaja cada empleado y el tamaño de burbuja seria el total de empleados de esa zona
+
+### Medidas DAX utilizadas 
+- `Total_empleados.dax`: Calcula el total de empleados.
+
+![Estructura de gráfico de barras horizontales](./imgs/Mapa_TotalEmpleadosUbicacion.png)
+
