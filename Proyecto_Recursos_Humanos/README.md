@@ -63,3 +63,63 @@ Dentro del mapa se utiliza como ubicación, el estado donde trabaja cada emplead
 
 ![Estructura de gráfico de barras horizontales](./imgs/Mapa_TotalEmpleadosUbicacion.png)
 
+## Estructura de gráfico de Matrices
+
+Como columnas se utilizaron los siguientes items:
+
+- `Nombre empleado`
+- `Genero`
+- `Departamento`
+- `Posición`
+- `Estado`
+- `Sueldo_promedio`
+- `Evaluación`
+
+![Estructura de matriz en total empleados](./imgs/Matriz_en_totalEmpleados.png)
+
+
+
+## Visualización de hoja de total de empleados
+
+![Estructura de analisis de sueldos ](./imgs/AnalisisDeSueldosHoja.png)
+
+
+Aqui mantenemos la estructura de la hoja anterior de total de empleados pero en analisis de sueldos tenemos algo direfente que seria el gráfico de dispersión
+
+Para este utilizamos la edad de cada empleado con su sueldo promedio
+
+![Grafico de dispersion](imgs/GraficoDispersionAnalisisSueldo.png)
+
+
+## Visualización de hoja de Analisis de desempeño
+
+
+1. **Mapa de EE.UU.**: Indica la evaluación promedio y el total de empleados por estado.
+
+2. **Gráfico de Barras**: Muestra el total de empleados por departamento.
+
+3. **Gráfico de Barras Adicional**: Presenta la evaluación promedio por nombre de jefe.
+
+4. **Gráfico de Barras de Género**: Detalla el total de empleados, la edad promedio y el sueldo promedio por género.
+
+5. **Tabla de Detalles de Empleados**: Lista nombres, género, departamento, posición, estado y sueldo promedio de los empleados.
+
+Para esta visualización tenemos el analisis de desempeño que nos ayuda ver cual es la evaluación de los jefes en cada uno de los departamentos.
+
+### Estructura de gráfico de Desempeño
+
+En el gráfico de filas apiladas tenemos el nombre de cada jefe de departamento y su evaluación promedio, con esto podemos ver cual es el desempeño de sus empleados y como ellos influyen en sus equipos y en el gráfico de Columnas apiladas tenemos una segmentación de genero y su ademas de su sueldo promedio 
+
+![Graficos de desempeños](imgs/GraficosDesempeños.png)
+
+
+## Aplicación de filtros
+aplicamos una configuracion a nuestra matriz en el nombre de empleado
+![Configuraión de nombre de empleado](imgs/configuracionNombreEmpleado.png)
+
+despues de eso hacemos la funcion conrrespondiente
+![Configuraión de nombre de empleado](imgs/colorFondoPorEvaluacion.png)
+
+
+
+
