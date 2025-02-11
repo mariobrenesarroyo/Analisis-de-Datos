@@ -1,0 +1,5 @@
+No Hubo Ingresos ni Gastos = 
+VAR IngresosTotales = [Total ingresos]
+VAR GastosTotales = [Total Gastos Modificado]
+RETURN
+IF(ISBLANK(IngresosTotales) && ISBLANK(GastosTotales), "No hubo ingresos ni gastos", BLANK())

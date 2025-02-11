@@ -1,0 +1,6 @@
+Total Ingresos Modificado = 
+VAR Ingresos = SUMX(FILTER('registro_2023', 'registro_2023'[tipo ] = "Ingresos"), 'registro_2023'[total ])
+RETURN
+IF(ISBLANK(Ingresos), 0, Ingresos)
+
+

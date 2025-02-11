@@ -1,0 +1,1 @@
+Ventas hace 1 mes = CALCULATE(SUM(registro_2023[cantidad]), DATEADD(Dim_fecha[Fecha], -1, MONTH))

@@ -1,0 +1,4 @@
+Total Gastos Modificado = 
+VAR Gastos = SUMX(FILTER('registro_2023', 'registro_2023'[tipo ] = "Gastos"), 'registro_2023'[total ])
+RETURN
+IF(ISBLANK(Gastos), 0, Gastos)
