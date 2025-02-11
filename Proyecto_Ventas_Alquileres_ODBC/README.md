@@ -9,6 +9,7 @@ El proyecto se basa en una hoja de cálculo de Excel con macros incorporadas, de
 - Power BI
 - Excel con macros habilitadas
 - Servidor SQL
+- Power Automate
 
 ## Configuración
 1. Habilitar macros en Excel.
@@ -56,3 +57,22 @@ Esto ayuda a no tener espacios faltantes en caso de que se realicen medidas en n
 ![Dashboard Principal](imgs/dashboardPrincipal.png)
 - Interactuar con las visualizaciones para obtener insights sobre ventas, compras y finanzas de la tienda.
 - Utilizar filtros y segmentaciones para un análisis detallado.
+
+
+## Diseño de Flujo de Trabajo con Power Automate
+
+![Flujo de trabajo para refrescar el dataset](imgs/WorkflowRefreshDataset.png)
+
+Este flujo de trabajo en Power Automate conecta el dataset de nuestros datos en la nube y, con una recurrencia mensual, actualiza los datos del reporte si hay nuevos datos disponibles. Además, envía un correo electrónico a la persona encargada de administrar el dataset.
+
+### Pasos del Flujo de Trabajo
+1. **Conexión del Dataset:** El flujo se conecta al dataset alojado en la nube.
+2. **Actualización del Dataset:** Una vez al mes, se verifica si hay nuevos datos disponibles y se actualiza el dataset en el reporte.
+3. **Notificación por Correo Electrónico:** Se envía una notificación por correo electrónico a la persona encargada de la administración del dataset, informando sobre la actualización.
+
+### Beneficios del Flujo de Trabajo
+- **Automatización:** Reduce la necesidad de intervención manual al actualizar los datos.
+- **Consistencia:** Asegura que el dataset esté siempre actualizado con la información más reciente.
+- **Notificaciones:** Mantiene a los administradores informados sobre el estado del dataset y las actualizaciones.
+
+Este flujo de trabajo mejora la eficiencia y la precisión del manejo de datos en tu proyecto.
