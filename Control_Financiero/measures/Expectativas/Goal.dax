@@ -1,0 +1,1 @@
+Meta = CALCULATE( [Total Expectativas] , Expectativas[Tipo] = "Meta" )

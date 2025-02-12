@@ -1,0 +1,1 @@
+Sa. Esperado = CALCULATE( [Ut. Esperada] , FILTER( ALL( Expectativas ) , Expectativas[Fecha] <= MAX( Expectativas[Fecha] ) ) )

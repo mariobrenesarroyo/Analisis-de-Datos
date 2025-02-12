@@ -1,0 +1,1 @@
+Ingresos = CALCULATE( [Total Finanzas] , Finanzas[Tipo] = "Ingresos" )

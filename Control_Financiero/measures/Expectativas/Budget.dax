@@ -1,0 +1,1 @@
+Presupuesto = CALCULATE( [Total Expectativas] , Expectativas[Tipo] = "Presupuesto" )
