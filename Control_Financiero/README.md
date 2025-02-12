@@ -1,6 +1,7 @@
 # Dashboard Financiero
 
 Este README proporciona una guía paso a paso para la creación de un dashboard financiero en Power BI.
+![Plantilla Principal](imgs/PlantillaPrincipal.png)
 
 ## Estructura del Dashboard
 
