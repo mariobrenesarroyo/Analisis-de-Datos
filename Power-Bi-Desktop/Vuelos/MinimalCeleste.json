@@ -1,0 +1,32 @@
+{
+  "name": "Minimal Celeste",
+  "dataColors": ["#00AEEF", "#7F7F7F", "#E6E6E6", "#FF6B6B", "#6BCB77"],
+  "background": "#FFFFFF",
+  "foreground": "#333333",
+  "tableAccent": "#00AEEF",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [{ "color": "#333333", "fontSize": 14 }],
+        "labels": [{ "color": "#333333" }]
+      }
+    },
+    "card": {
+      "*": {
+        "labelColor": [{ "color": "#333333" }],
+        "valueColor": [{ "color": "#00AEEF" }]
+      }
+    },
+    "gauge": {
+      "*": {
+        "dataColors": [{ "color": "#00AEEF" }]
+      }
+    },
+    "slicer": {
+      "*": {
+        "header": [{ "color": "#00AEEF" }],
+        "foreground": [{ "color": "#333333" }]
+      }
+    }
+  }
+}
