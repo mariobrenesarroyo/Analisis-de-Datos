@@ -1,0 +1,1290 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Product Testing - Mario Arroyo - Portfolio de Análisis y Ciencia de Datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#product-testing-analisis-de-calidad-y-clasificacion-predictiva" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mario Arroyo - Portfolio de Análisis y Ciencia de Datos" class="md-header__button md-logo" aria-label="Mario Arroyo - Portfolio de Análisis y Ciencia de Datos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mario Arroyo - Portfolio de Análisis y Ciencia de Datos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Product Testing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Proyectos Ciencia de Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../habilidades.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Habilidades
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mario Arroyo - Portfolio de Análisis y Ciencia de Datos" class="md-nav__button md-logo" aria-label="Mario Arroyo - Portfolio de Análisis y Ciencia de Datos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mario Arroyo - Portfolio de Análisis y Ciencia de Datos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos Ciencia de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos Ciencia de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Testing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Flujo del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Flujo del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-limpieza-y-preparacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Limpieza y Preparación de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Limpieza y Preparación de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-procesamiento-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de Procesamiento Técnico:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-analisis-exploratorio-eda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Análisis Exploratorio (EDA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-analisis-de-correlacion-multivariada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Análisis de Correlación Multivariada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Análisis de Correlación Multivariada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-tecnica-de-la-matriz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación Técnica de la Matriz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hallazgos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hallazgos Clave:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-comparativa-de-metricas-de-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Comparativa de Métricas de Rendimiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Comparativa de Métricas de Rendimiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-los-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis de los Resultados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-final-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización Final de Resultados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Conclusión del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Herramientas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Herramientas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-analisis-de-confiabilidad-y-mantenibilidad-kpis-industriales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Análisis de Confiabilidad y Mantenibilidad (KPIs Industriales)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Análisis de Confiabilidad y Mantenibilidad (KPIs Industriales)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-de-kpi_distributionspng" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación de kpi_distributions.png
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-son-importantes-estos-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué son importantes estos análisis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-de-solucion-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrategia de Solución Propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autor-mario-enrique-brenes-arroyo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autor: Mario Enrique Brenes Arroyo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Evasion_clientes/Evasion_clientes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evasión de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech_sales/Tech_sales.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Sales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../habilidades.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Habilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Flujo del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Flujo del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-limpieza-y-preparacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Limpieza y Preparación de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Limpieza y Preparación de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-procesamiento-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de Procesamiento Técnico:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-analisis-exploratorio-eda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Análisis Exploratorio (EDA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-analisis-de-correlacion-multivariada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Análisis de Correlación Multivariada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Análisis de Correlación Multivariada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-tecnica-de-la-matriz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación Técnica de la Matriz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hallazgos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hallazgos Clave:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-comparativa-de-metricas-de-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Comparativa de Métricas de Rendimiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Comparativa de Métricas de Rendimiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-los-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis de los Resultados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-final-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización Final de Resultados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Conclusión del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Herramientas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Herramientas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-analisis-de-confiabilidad-y-mantenibilidad-kpis-industriales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Análisis de Confiabilidad y Mantenibilidad (KPIs Industriales)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Análisis de Confiabilidad y Mantenibilidad (KPIs Industriales)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-de-kpi_distributionspng" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretación de kpi_distributions.png
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-son-importantes-estos-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué son importantes estos análisis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-de-solucion-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrategia de Solución Propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autor-mario-enrique-brenes-arroyo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autor: Mario Enrique Brenes Arroyo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="product-testing-analisis-de-calidad-y-clasificacion-predictiva">Product Testing - Análisis de Calidad y Clasificación Predictiva</h1>
+<p>Este repositorio contiene un análisis integral de control de calidad para productos industriales. El proyecto abarca desde la ingeniería de datos hasta la implementación de modelos de Machine Learning para predecir fallas, abordando desafíos comunes como el desbalance de clases.</p>
+<h2 id="flujo-del-proyecto">📊 Flujo del Proyecto</h2>
+<h3 id="1-limpieza-y-preparacion-de-datos">1. Limpieza y Preparación de Datos</h3>
+<p>Esta etapa fue crítica para transformar un dataset de pruebas técnico (con formatos inconsistentes) en un conjunto de datos apto para modelos de Machine Learning. </p>
+<h4 id="flujo-de-procesamiento-tecnico"><strong>Flujo de Procesamiento Técnico:</strong></h4>
+<ul>
+<li><strong>Identificación y Casting de Tipos:</strong> Los datos de entrada presentaban columnas de tipo <code>object</code> (strings) debido a unidades de medida y formatos de texto. <ul>
+<li>Se aplicó <code>pd.to_numeric(errors='coerce')</code> para forzar la conversión a <code>float64</code>. </li>
+<li>Cualquier valor no numérico o malformado fue transformado automáticamente en <strong>NaN</strong>, permitiendo una limpieza estandarizada.</li>
+</ul>
+</li>
+<li><strong>Gestión de Valores Faltantes (NaN):</strong> * Tras la conversión a tipos numéricos, se ejecutó <code>df.dropna()</code> para eliminar registros incompletos.<ul>
+<li>Este enfoque de "eliminación por filas" aseguró que el modelo no fuera entrenado con datos sesgados o imputaciones artificiales en variables de sensores críticos.</li>
+</ul>
+</li>
+<li><strong>Ingeniería de Datetime:</strong> * Se estandarizó la columna temporal a formato <code>datetime64</code>.<ul>
+<li>Esto permitió organizar cronológicamente las pruebas y asegurar que la limpieza de nulos no afectara la continuidad de la serie de datos.</li>
+</ul>
+</li>
+<li><strong>Normalización y Escalamiento:</strong> * Para que algoritmos como <strong>SMOTE</strong> y las <strong>Matrices de Confusión</strong> funcionen correctamente, se aplicó un escalamiento de características. <ul>
+<li>Esto igualó la magnitud de todas las variables (F1, F2, F3, etc.), evitando que los valores de mayor escala dominaran erróneamente el aprendizaje del modelo. </li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Estado Inicial (Raw)</th>
+<th style="text-align: center;">Post-Casting y Limpieza</th>
+<th style="text-align: center;">Post-Normalización</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="Initial Head" src="../../imagenes/df_initial_head.png" /></td>
+<td style="text-align: center;"><img alt="Post Clean" src="../../imagenes/df_post_nan_cleaning.png" /></td>
+<td style="text-align: center;"><img alt="Post Norm" src="../../imagenes/df_post_normalization.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-analisis-exploratorio-eda">2. Análisis Exploratorio (EDA)</h3>
+<p>Se analizaron las distribuciones de las variables clave (F2, F3) y el comportamiento de los KPIs para entender qué parámetros afectan la calidad del producto.</p>
+<ul>
+<li><strong>Distribuciones Técnicas:</strong>
+  <img alt="Distribución F2" src="../../imagenes/distribution_F2.png" /> <img alt="Distribución F3" src="../../imagenes/distribution_F3.png" /></li>
+<li><strong>Análisis de KPIs y Resultados:</strong>
+  <img alt="Distribución Result" src="../../imagenes/distribution_result.png" /> <img alt="KPI Distributions" src="../../imagenes/kpi_distributions.png" /></li>
+</ul>
+<h3 id="3-analisis-de-correlacion-multivariada">3. Análisis de Correlación Multivariada</h3>
+<p>Se generó un mapa de calor (Heatmap) utilizando el <strong>Coeficiente de Correlación de Pearson ($r$)</strong> para identificar las relaciones lineales entre los diferentes sensores y parámetros de prueba del producto. Esta visualización es fundamental para detectar redundancias y entender qué variables influyen en el resultado final.</p>
+<h4 id="interpretacion-tecnica-de-la-matriz"><strong>Interpretación Técnica de la Matriz:</strong></h4>
+<p>El mapa utiliza una escala cromática divergente que permite diagnosticar el comportamiento del sistema de sensores de un vistazo:</p>
+<ul>
+<li><strong>Rojo Intenso (Correlación Positiva, $r \to 1$):</strong> Indica una relación directa. Cuando el valor de un sensor aumenta, el otro también lo hace. En este dataset, las zonas rojas fuera de la diagonal principal sugieren <strong>redundancia de datos</strong>, donde dos sensores capturan fenómenos físicos similares.</li>
+<li><strong>Azul Intenso (Correlación Negativa, $r \to -1$):</strong> Indica una relación inversa. Un incremento en una variable predice una disminución en la otra. Esto es común en sistemas con lazos de control donde una acción correctiva busca estabilizar un parámetro.</li>
+<li><strong>Blanco o Tonos Claros (Independencia, $r \to 0$):</strong> Indica que las variables son linealmente independientes. El comportamiento de un sensor no explica en absoluto el del otro.</li>
+</ul>
+<h4 id="hallazgos-clave"><strong>Hallazgos Clave:</strong></h4>
+<ol>
+<li><strong>Complejidad del Fallo:</strong> La baja correlación (tonos claros) entre la mayoría de los sensores y la variable objetivo <code>Result</code> confirma que la falla no es causada por un solo factor lineal. Esto justifica el uso de modelos de <strong>Machine Learning</strong> no lineales para capturar patrones complejos.</li>
+<li><strong>Optimización de Features:</strong> Identificar pares de variables con correlación muy alta ($&gt;0.9$) permite considerar la eliminación de una de ellas en futuras iteraciones para reducir el costo computacional sin perder precisión.</li>
+<li><strong>Integridad de Datos:</strong> La generación exitosa de esta matriz valida que el proceso previo de <strong>Casting de datos</strong> (de <code>object</code> a <code>float</code>) y la limpieza de valores <strong>NaN</strong> se realizaron correctamente, permitiendo el cálculo matemático sobre todas las dimensiones del dataset.</li>
+</ol>
+<p><img alt="Correlation Heatmap" src="../../imagenes/correlation_heatmap.png" /></p>
+<h3 id="5-comparativa-de-metricas-de-rendimiento">5. Comparativa de Métricas de Rendimiento</h3>
+<p>Para validar la eficacia de cada estrategia de muestreo, se extrajeron las métricas clave de los informes de clasificación. Dado que el objetivo es el control de calidad industrial, el foco principal se puso en el <strong>Recall</strong> de la clase defectuosa.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Estrategia</th>
+<th style="text-align: center;">Clase</th>
+<th style="text-align: center;">Precision</th>
+<th style="text-align: center;">Recall</th>
+<th style="text-align: center;">F1-Score</th>
+<th style="text-align: center;">Accuracy Global</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Original</strong></td>
+<td style="text-align: center;">Defectuoso</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;"><strong>92%</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">Aprobado</td>
+<td style="text-align: center;">0.92</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.96</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RUS</strong></td>
+<td style="text-align: center;">Defectuoso</td>
+<td style="text-align: center;">0.28</td>
+<td style="text-align: center;">0.82</td>
+<td style="text-align: center;">0.42</td>
+<td style="text-align: center;"><strong>74%</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">Aprobado</td>
+<td style="text-align: center;">0.98</td>
+<td style="text-align: center;">0.73</td>
+<td style="text-align: center;">0.84</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SMOTE</strong></td>
+<td style="text-align: center;">Defectuoso</td>
+<td style="text-align: center;">0.45</td>
+<td style="text-align: center;">0.78</td>
+<td style="text-align: center;">0.57</td>
+<td style="text-align: center;"><strong>86%</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">Aprobado</td>
+<td style="text-align: center;">0.98</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">0.93</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="analisis-de-los-resultados"><strong>Análisis de los Resultados:</strong></h4>
+<ol>
+<li><strong>La Trampa del Accuracy:</strong> El modelo <strong>Original</strong> tiene un 92% de accuracy, pero un <strong>Recall de 0%</strong> para productos defectuosos. Esto significa que el modelo "engaña" al parecer bueno, pero en realidad no detecta ninguna falla (las ignora por completo debido al desbalance).</li>
+<li><strong>El Compromiso de RUS:</strong> Logró el mejor <strong>Recall (0.82)</strong>, detectando la mayoría de las fallas, pero su <strong>Precision</strong> cayó drásticamente (0.28). Esto generaría demasiadas "falsas alarmas" en la línea de producción, deteniendo el proceso innecesariamente.</li>
+<li><strong>El Equilibrio de SMOTE:</strong> Se seleccionó como la mejor técnica porque logró un <strong>Recall sólido (0.78)</strong> manteniendo un <strong>F1-Score mucho más alto (0.57)</strong> que RUS. Esto permite detectar fallas de manera confiable sin saturar al equipo de mantenimiento con falsos positivos.</li>
+</ol>
+<h4 id="visualizacion-final-de-resultados"><strong>Visualización Final de Resultados:</strong></h4>
+<p>La mejora en la capacidad de detección se evidencia al comparar las matrices de confusión, donde SMOTE logra "iluminar" la diagonal de predicciones correctas para la clase minoritaria:</p>
+<p><img alt="Comparison" src="../../imagenes/confusion_matrices_comparison.png" /></p>
+<h3 id="conclusion-del-proyecto">📈 Conclusión del Proyecto</h3>
+<p>El análisis demuestra que mediante el uso de <strong>SMOTE</strong> y un preprocesamiento riguroso de datos de sensores, es posible construir un sistema de alerta temprana que identifique el <strong>78% de los productos defectuosos</strong> antes de que salgan de la planta, optimizando los KPIs de calidad y reduciendo costos operativos.</p>
+<h2 id="herramientas">🛠️ Herramientas</h2>
+<ul>
+<li><strong>Análisis:</strong> Python (Pandas, NumPy) </li>
+<li><strong>Visualización:</strong> Matplotlib, Seaborn </li>
+<li><strong>ML:</strong> Scikit-learn (SMOTE, RUS, Modelos de Clasificación) </li>
+</ul>
+<h3 id="6-analisis-de-confiabilidad-y-mantenibilidad-kpis-industriales">6. Análisis de Confiabilidad y Mantenibilidad (KPIs Industriales)</h3>
+<p>En esta fase final, el proyecto trasciende el análisis de datos puro para entrar en el dominio de la <strong>Ingeniería de Confiabilidad</strong>. Se utilizaron los registros de fallas para calcular métricas que determinan la salud operativa de la línea de producción.</p>
+<h4 id="interpretacion-de-kpi_distributionspng"><strong>Interpretación de kpi_distributions.png</strong></h4>
+<p>La visualización de las distribuciones de KPIs es fundamental para entender el comportamiento estadístico de los activos. Aquí se explica cómo interpretar cada gráfico:</p>
+<ol>
+<li>
+<p><strong>Distribución de MTBF (Confiabilidad):</strong> * <strong>Qué buscar:</strong> Una distribución desplazada hacia la derecha es ideal, ya que indica tiempos largos entre fallas.</p>
+<ul>
+<li><strong>Análisis:</strong> <ul>
+<li><strong>Diagnóstico:</strong> El intervalo entre fallas es bajo y disperso (máximo 16 horas). Esto indica que el sistema no logra alcanzar un estado de régimen permanente antes de fallar nuevamente, sugiriendo fatiga prematura de componentes o descalibración por deriva térmica (<em>Sensor Drift</em>).</li>
+<li><strong>Interpretación:</strong> La baja frecuencia en rangos altos confirma que las fallas son aleatorias, lo cual es típico de entornos con alto ruido eléctrico o inconsistencia en la calidad de los materiales.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Distribución de MTTR (Mantenibilidad):</strong></p>
+<ul>
+<li><strong>Qué buscar:</strong> Una distribución estrecha y desplazada hacia la izquierda (cerca del cero).</li>
+<li><strong>Análisis:</strong> <ul>
+<li><strong>Diagnóstico:</strong> Un MTTR cercano a cero es, irónicamente, una señal de alerta. Indica que las reparaciones son superficiales (como reinicios de software o ajustes rápidos) en lugar de intervenciones sobre la causa raíz. </li>
+<li><strong>Interpretación:</strong> El personal técnico logra restablecer el sistema rápido, pero al no corregir el origen físico del fallo, el ciclo de error se repite constantemente, degradando el MTBF.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Distribución de Disponibilidad:</strong></p>
+<ul>
+<li><strong>Análisis:</strong> Refleja el porcentaje de tiempo que el sistema de pruebas estuvo operativo. Los valores atípicos (outliers) en la parte baja de la escala señalan periodos de crisis operativa donde la acumulación de fallas detuvo la línea de producción.<ul>
+<li><strong>Diagnóstico:</strong> La disponibilidad operativa se encuentra sesgada hacia el rango 0-0.2. A pesar de la rapidez de las reparaciones (MTTR bajo), la alta frecuencia de interrupciones (MTBF bajo) mantiene la línea de producción detenida la mayor parte del tiempo.</li>
+<li><strong>Impacto:</strong> Este nivel de disponibilidad genera cuellos de botella críticos y elevados costos por paradas no programadas.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="por-que-son-importantes-estos-analisis"><strong>¿Por qué son importantes estos análisis?</strong></h4>
+<ul>
+<li><strong>Identificación de "Bad Actors":</strong> Permite localizar qué números de serie o lotes específicos están degradando el MTBF promedio.</li>
+<li><strong>Optimización de Recursos:</strong> Al conocer el MTTR promedio, la gerencia puede planificar mejor los turnos de trabajo y el stock de componentes de reemplazo (F1...Fn).</li>
+<li><strong>Predicción de Riesgos:</strong> Un cambio en la tendencia de estas distribuciones sirve como un sistema de alerta temprana ante una posible degradación en la calidad de los materiales recibidos.</li>
+</ul>
+<p><img alt="KPI Distributions" src="../../imagenes/kpi_distributions.png" /></p>
+<h3 id="estrategia-de-solucion-propuesta">Estrategia de Solución Propuesta</h3>
+<p>Para revertir estos indicadores, se propone una transición de mantenimiento correctivo a <strong>Predictivo basado en Datos</strong>:</p>
+<ol>
+<li><strong>Monitoreo de Supervivencia:</strong> Implementar alertas de mantenimiento preventivo obligatorias a las 10-12 horas de operación para realizar limpiezas y calibraciones antes de que el sistema alcance el umbral crítico de falla (16h).</li>
+<li><strong>Filtrado por Machine Learning:</strong> Utilizar el modelo de clasificación entrenado (SMOTE) para identificar las variables de sensores que presentan anomalías <em>antes</em> de la falla, permitiendo una intervención proactiva.</li>
+<li><strong>Auditoría de Causa Raíz (RCA):</strong> Estandarizar los protocolos de reparación para asegurar que cada intervención elimine el problema de raíz y no solo restablezca el sistema momentáneamente, buscando elevar el MTBF por encima de las 100 horas.</li>
+</ol>
+<blockquote>
+<p><strong>Conclusión Técnica:</strong> La integración de estos KPIs con el modelo de Machine Learning permite no solo saber <em>si</em> un producto fallará (Predicción), sino también <em>qué impacto</em> tendrá esa falla en la productividad global de la planta (Gestión).</p>
+</blockquote>
+<hr />
+<h2 id="conclusion">🚀 Conclusión</h2>
+<p>Este proyecto integra la <strong>Ciencia de Datos</strong> con la <strong>Ingeniería Eléctrica</strong>, proporcionando una herramienta capaz de predecir fallas con un <strong>78% de sensibilidad (Recall)</strong> y monitorear la salud operativa de la línea de producción mediante métricas de mantenimiento industrial.</p>
+<hr />
+<h2 id="autor-mario-enrique-brenes-arroyo"><strong>Autor:</strong> Mario Enrique Brenes Arroyo</h2>
+<p><strong>Autor:</strong> Mario Enrique Brenes Arroyo 
+<strong>Contacto:</strong> <a href="https://www.linkedin.com/in/mariobrenes">LinkedIn</a> | marioucrtec@gmail.com</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
