@@ -17,12 +17,12 @@ Especialista en la intersección de la **ingeniería de hardware** y el **análi
 
 En esta sección presento soluciones basadas en algoritmos para predecir comportamientos y optimizar procesos.
 
-### [Análisis de Product Testing & Confiabilidad](./product_testing.md)
+### [Análisis de Product Testing & Confiabilidad](./proyectos_ciencia_de_datos/Product_testing/Product_testing.md)
 * **Problema:** Clasificación de fallas en circuitos electrónicos con datos altamente desbalanceados.
 * **Solución:** Implementación de **SMOTE** para balanceo de clases y entrenamiento de modelos de clasificación.
 * **Impacto Industrial:** Cálculo de **MTBF** y **MTTR** para la mejora de la mantenibilidad en planta.
 
-### [Predicción de Evasión de Clientes (Churn)](./evasion_clientes.md)
+### [Predicción de Evasión de Clientes (Churn)](./proyectos_ciencia_de_datos/Evacion_clientes/evasion_clientes.md)
 * Uso de modelos para identificar patrones de abandono de usuarios y proponer estrategias de retención.
 
 ---
@@ -31,10 +31,10 @@ En esta sección presento soluciones basadas en algoritmos para predecir comport
 
 Análisis descriptivo y diagnóstico para la comprensión del desempeño histórico y actual.
 
-### [Dashboards de Ventas y Tech Sales](./tech_sales.md)
+### [Dashboards de Ventas y Tech Sales](./proyectos_analisis_de_datos/tech_sales/tech_sales.md)
 * Visualización interactiva en **Power BI** para el seguimiento de cuotas de ventas, márgenes de ganancia y rendimiento por región.
 
-### [Análisis de Operaciones y Mantenimiento](./mantenimiento_industrial.md)
+### [Análisis de Operaciones y Mantenimiento](./proyectos_analisis_de_datos/mantenimiento_industrial/mantenimiento_industrial.md)
 * Reportes de disponibilidad de activos y eficiencia operativa (OEE).
 
 ---
