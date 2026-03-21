@@ -1,0 +1,17 @@
+site_name: Mario Arroyo - Portfolio de Análisis y Ciencia de Datos
+theme:
+  name: material
+  palette:
+    scheme: slate # Tema oscuro profesional
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+
+nav:
+  - Inicio: index.md
+  - Proyectos:
+      - Product Testing: product_testing.md
+      - Evasión de Clientes: evasion_clientes.md
+      - Tech Sales: tech_sales.md
+  - Habilidades: habilidades.md
