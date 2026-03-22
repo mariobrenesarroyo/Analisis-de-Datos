@@ -37,6 +37,9 @@ Análisis descriptivo y diagnóstico para la comprensión del desempeño histór
 ### [Análisis de Operaciones y Mantenimiento](./proyectos_analisis_de_datos/mantenimiento_industrial/mantenimiento_industrial.md)
 * Reportes de disponibilidad de activos y eficiencia operativa (OEE).
 
+## [Análisis para recursos humanos](./proyectos_analisis_de_datos/Recursos_humanos/Recursos_humanos.md)
+* Este proyecto tiene como objetivo desarrollar un **dashboard** interactivo y fácil de usar para la gestión de recursos humanos. El **dashboard** proporcionará una vista comprensiva de los datos de empleados, evaluaciones y sueldos, permitiendo a los administradores tomar decisiones informadas y mejorar la gestión del personal.
+
 ---
 
 ## 🧠 Habilidades Técnicas

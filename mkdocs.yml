@@ -12,5 +12,7 @@ nav:
   - Inicio: index.md
   - Proyectos Ciencia de Datos:
       - Product Testing: proyectos_ciencia_de_datos/Product_testing/Product_testing.md
-      - Evasión de Clientes: proyectos_ciencia_de_datos/Evasion_clientes/Evasion_clientes.md
-      - Tech Sales: proyectos_ciencia_de_datos/Tech_sales/Tech_sales.md
+      - Evasión de Clientes: proyectos_ciencia_de_datos/Evacion_clientes/evasion_clientes.md
+  - Proyectos Análisis de Datos:
+    - Recursos Humanos: proyectos_analisis_de_datos/Recursos_humanos/Recursos_humanos.md
+    - Tech Sales: proyectos_analisis_de_datos/tech_sales/tech_sales.md
