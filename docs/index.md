@@ -1,12 +1,13 @@
 # Mario Enrique Brenes Arroyo
 ## Ingeniero Eléctrico | Data Scientist | Analista de Datos
 
-¡Bienvenido a mi portafolio profesional! Soy estudiante avanzado de **Ingeniería Eléctrica** en la Universidad de Costa Rica, con una sólida especialización en el aprovechamiento de datos para la optimización industrial y la toma de decisiones estratégicas.
+¡Bienvenido a mi portafolio profesional! Soy estudiante avanzado de **Ingeniería Eléctrica** en la Universidad de Costa Rica, con una sólida especialización en Ciencia de datos en el aprovechamiento de los mismos, para la optimización industrial y la toma de decisiones estratégicas.
 
 ---
 
 ## 🎯 Perfil Profesional
 Especialista en la intersección de la **ingeniería de hardware** y el **análisis de software**. Experto en transformar grandes volúmenes de datos crudos (sensores, registros de ventas, logs de mantenimiento) en insights accionables mediante modelos predictivos y visualizaciones avanzadas.
+para mas información y busqueda de repositorios pueden entrar a mi link  [[Repositorio]](https://github.com/mariobrenesarroyo/Analisis-de-Datos)
 
 * **Enfoque de Analista:** Visualización estratégica, limpieza de datos y reporte de KPIs de negocio.
 * **Enfoque de Data Scientist:** Modelado estadístico, Machine Learning (Supervisado/No Supervisado) y despliegue de soluciones en la nube.
@@ -55,6 +56,6 @@ Análisis descriptivo y diagnóstico para la comprensión del desempeño histór
 
 ## 📫 Contacto
 ¿Interesado en colaborar o conocer más sobre mi perfil?
-* **LinkedIn:** [\[LinkedIn\]](https://www.linkedin.com/in/mario-enrique2903/)
+* **LinkedIn:** [[LinkedIn]](https://www.linkedin.com/in/mario-enrique2903/)
 * **Email:** marioucrtec@gmail.com
 * **Ubicación:** San José, Costa Rica
