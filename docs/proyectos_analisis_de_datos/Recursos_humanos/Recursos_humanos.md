@@ -1,127 +1,125 @@
-# Proyecto de Dashboard de Recursos Humanos
+# Human Resources Dashboard Project
 
-Este proyecto tiene como objetivo desarrollar un **dashboard** interactivo y fácil de usar para la gestión de recursos humanos. El **dashboard** proporcionará una vista comprensiva de los datos de empleados, evaluaciones y sueldos, permitiendo a los administradores tomar decisiones informadas y mejorar la gestión del personal.
+This project aims to develop an interactive and user-friendly **dashboard** for human resources management. The **dashboard** will provide a comprehensive view of employee data, evaluations, and salaries, allowing administrators to make informed decisions and improve personnel management.
 
-## Estructura del Proyecto
+## Project Structure
 
-El proyecto está organizado de la siguiente manera:
+The project is organized as follows:
 
-- **data/**: Contiene los archivos CSV con los datos necesarios para el **dashboard**.
-  - `Tabla Empleados.csv`: Información de los empleados, incluyendo sus identificadores únicos (ID Empleado).
-  - `Tabla Evaluacion.csv`: Evaluaciones de desempeño de los empleados.
-  - `Tabla Sueldo.csv`: Información sobre los sueldos de los empleados.
-- **imgs/**: Contiene las imágenes utilizadas en el **dashboard**.
-  - `relacion_de_tablas.png`: Diagrama de la relación entre las tablas.
+- **data/**: Contains the CSV files with the data needed for the **dashboard**.
+  - `Tabla Empleados.csv`: Employee information, including their unique identifiers (Employee ID).
+  - `Tabla Evaluacion.csv`: Performance evaluations of employees.
+  - `Tabla Sueldo.csv`: Information about employee salaries.
+- **imgs/**: Contains the images used in the **dashboard**.
+  - `relacion_de_tablas.png`: Diagram of the relationship between the tables.
 
-## Relación de las Tablas
+## Table Relationship
 
-Las tablas están relacionadas mediante el campo `ID Empleado`, que actúa como clave primaria en la `Tabla Empleados` y clave foránea en las tablas de `Evaluación` y `Sueldo`.
+The tables are related through the `Employee ID` field, which acts as a primary key in the `Employees Table` and as a foreign key in the `Evaluation` and `Salary` tables.
 
-![Relación de Tablas](./imgs/relacion_de_tablas.png)
-
-
-## Visualización de hoja de total de empleados
-
-Para esta hoja tendremos indicadores, Tarjetas, Gráficos de barras apiladas, Mapa, Gráfico de columnas apiladas y tablas que muestren los diferentes datos de nuestros empleados.
-
-![Hoja total empleados](./imgs/Hoja_total_empleados.png)
-
-## Estructura de gráfico de barras apiladas
-
-En el gráfico de la izquierda se analizan los grupos de edad con el total de empleados utilizando la medida DAX de `Grupo_Edad.dax`. En el gráfico del centro, se analiza el sueldo promedio por grupo de sueldo y total de empleados usando las medidas DAX de `Sueldo_promedio.dax` y `Total_empleados.dax`.
-
-### Medidas DAX utilizadas 
-
-- `Edad.dax`: Calcula la edad de los empleados.
-- `Edad_promedio.dax`: Calcula la edad promedio de los empleados.
-- `Evaluación_promedio.dax`: Calcula la evaluación promedio de los empleados.
-- `Grupo_desempeño.dax`: Agrupa los empleados por desempeño.
-- `Grupo_Edad.dax`: Agrupa los empleados por rango de edad.
-- `Sueldo_promedio.dax`: Calcula el sueldo promedio de los empleados.
-- `Total_empleados.dax`: Calcula el total de empleados.
-
-Cada una de estas medidas se utiliza para proporcionar datos más precisos y útiles en los gráficos y tablas del dashboard.
-
-![Estructura de gráfico de barras apiladas](./imgs/barras_apiladas_total_empleados.png)
+![Table Relationship](./imgs/relacion_de_tablas.png)
 
 
-## Estructura de gráfico de barras apiladas
-En este gráfico se está mostrando la cantidad de empleados que tenemos y el grupo de departamento al que pertenecen usando como ejes `Total_empleados.dax` y `Departamento`.
+## Total Employees Sheet Visualization
+
+For this sheet, we will have indicators, cards, stacked bar charts, map, stacked column charts, and tables that display the different data of our employees.
+
+![Total employees sheet](./imgs/Hoja_total_empleados.png)
+
+## Stacked Bar Chart Structure
+
+In the chart on the left, we analyze age groups with the total of employees using the DAX measure `Grupo_Edad.dax`. In the center chart, we analyze the average salary by salary group and total of employees using the DAX measures `Sueldo_promedio.dax` and `Total_empleados.dax`.
+
+### DAX Measures Used
+
+- `Edad.dax`: Calculates the age of employees.
+- `Edad_promedio.dax`: Calculates the average age of employees.
+- `Evaluación_promedio.dax`: Calculates the average evaluation of employees.
+- `Grupo_desempeño.dax`: Groups employees by performance.
+- `Grupo_Edad.dax`: Groups employees by age range.
+- `Sueldo_promedio.dax`: Calculates the average salary of employees.
+- `Total_empleados.dax`: Calculates the total number of employees.
+
+Each of these measures is used to provide more accurate and useful data in the dashboard charts and tables.
+
+![Stacked bar chart structure](./imgs/barras_apiladas_total_empleados.png)
 
 
-### Medidas DAX utilizadas 
-- `Total_empleados.dax`: Calcula el total de empleados.
+## Stacked Bar Chart Structure
+This chart shows the number of employees we have and the department group they belong to using `Total_empleados.dax` and `Department` as axes.
 
-![Estructura de gráfico de barras horizontales](./imgs/barras_horizontales_empleadosDepartamento.png)
+### DAX Measures Used
+- `Total_empleados.dax`: Calculates the total number of employees.
 
-
-## Estructura de gráfico de Mapa
-Dentro del mapa se utiliza como ubicación, el estado donde trabaja cada empleado y el tamaño de burbuja seria el total de empleados de esa zona
-
-### Medidas DAX utilizadas 
-- `Total_empleados.dax`: Calcula el total de empleados.
-
-![Estructura de gráfico de barras horizontales](./imgs/Mapa_TotalEmpleadosUbicacion.png)
-
-## Estructura de gráfico de Matrices
-
-Como columnas se utilizaron los siguientes items:
-
-- `Nombre empleado`
-- `Genero`
-- `Departamento`
-- `Posición`
-- `Estado`
-- `Sueldo_promedio`
-- `Evaluación`
-
-![Estructura de matriz en total empleados](./imgs/Matriz_en_totalEmpleados.png)
+![Horizontal bar chart structure](./imgs/barras_horizontales_empleadosDepartamento.png)
 
 
+## Map Chart Structure
+Within the map, we use the state where each employee works as the location, and the bubble size would be the total employees in that area.
 
-## Visualización de hoja de total de empleados
+### DAX Measures Used
+- `Total_empleados.dax`: Calculates the total number of employees.
 
-![Estructura de analisis de sueldos ](./imgs/AnalisisDeSueldosHoja.png)
+![Horizontal bar chart structure](./imgs/Mapa_TotalEmpleadosUbicacion.png)
 
+## Matrix Chart Structure
 
-Aqui mantenemos la estructura de la hoja anterior de total de empleados pero en analisis de sueldos tenemos algo direfente que seria el gráfico de dispersión
+The following items were used as columns:
 
-Para este utilizamos la edad de cada empleado con su sueldo promedio
+- `Employee name`
+- `Gender`
+- `Department`
+- `Position`
+- `State`
+- `Average salary`
+- `Evaluation`
 
-![Grafico de dispersion](imgs/GraficoDispersionAnalisisSueldo.png)
-
-
-## Visualización de hoja de Analisis de desempeño
-
-
-1. **Mapa de EE.UU.**: Indica la evaluación promedio y el total de empleados por estado.
-
-2. **Gráfico de Barras**: Muestra el total de empleados por departamento.
-
-3. **Gráfico de Barras Adicional**: Presenta la evaluación promedio por nombre de jefe.
-
-4. **Gráfico de Barras de Género**: Detalla el total de empleados, la edad promedio y el sueldo promedio por género.
-
-5. **Tabla de Detalles de Empleados**: Lista nombres, género, departamento, posición, estado y sueldo promedio de los empleados.
-
-Para esta visualización tenemos el analisis de desempeño que nos ayuda ver cual es la evaluación de los jefes en cada uno de los departamentos.
-
-### Estructura de gráfico de Desempeño
-
-En el gráfico de filas apiladas tenemos el nombre de cada jefe de departamento y su evaluación promedio, con esto podemos ver cual es el desempeño de sus empleados y como ellos influyen en sus equipos y en el gráfico de Columnas apiladas tenemos una segmentación de genero y su ademas de su sueldo promedio 
-
-![Graficos de desempeños](imgs/GraficosDesempeños.png)
+![Matrix chart in total employees](./imgs/Matriz_en_totalEmpleados.png)
 
 
-## Aplicación de filtros
-aplicamos una configuracion a nuestra matriz en el nombre de empleado
 
-![Configuraión de nombre de empleado](imgs/configuracionNombreEmpleado.png)
+## Total Employees Sheet Visualization
 
-despues de eso hacemos la funcion conrrespondiente
+![Salary analysis structure](./imgs/AnalisisDeSueldosHoja.png)
 
-![Configuraión de nombre de empleado](imgs/colorFondoPorEvaluacion.png)
 
+Here we maintain the structure of the previous sheet of total employees but in salary analysis we have something different which would be the scatter plot.
+
+For this we use the age of each employee with their average salary
+
+![Scatter chart](imgs/GraficoDispersionAnalisisSueldo.png)
+
+
+## Performance Analysis Sheet Visualization
+
+
+1. **U.S. Map**: Shows the average evaluation and total employees by state.
+
+2. **Bar Chart**: Shows the total employees by department.
+
+3. **Additional Bar Chart**: Presents the average evaluation by manager name.
+
+4. **Gender Bar Chart**: Details the total employees, average age, and average salary by gender.
+
+5. **Employee Details Table**: Lists names, gender, department, position, state, and average salary of employees.
+
+For this visualization we have the performance analysis that helps us see the evaluation of managers in each of the departments.
+
+### Performance Chart Structure
+
+In the stacked rows chart we have the name of each department manager and their average evaluation, with this we can see the performance of their employees and how they influence their teams, and in the stacked columns chart we have a gender segmentation and their average salary as well.
+
+![Performance charts](imgs/GraficosDesempeños.png)
+
+
+## Filter Application
+We apply a configuration to our matrix in the employee name
+
+![Employee name configuration](imgs/configuracionNombreEmpleado.png)
+
+After that we make the corresponding function
+
+![Employee name configuration](imgs/colorFondoPorEvaluacion.png)
 
 
 

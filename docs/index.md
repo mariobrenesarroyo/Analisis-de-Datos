@@ -1,61 +1,61 @@
 # Mario Enrique Brenes Arroyo
-## Ingeniero Eléctrico | Data Scientist | Analista de Datos
+## Electrical Engineer | Data Scientist | Data Analyst
 
-¡Bienvenido a mi portafolio profesional! Soy estudiante avanzado de **Ingeniería Eléctrica** en la Universidad de Costa Rica, con una sólida especialización en Ciencia de datos en el aprovechamiento de los mismos, para la optimización industrial y la toma de decisiones estratégicas.
-
----
-
-## 🎯 Perfil Profesional
-Especialista en la intersección de la **ingeniería de hardware** y el **análisis de software**. Experto en transformar grandes volúmenes de datos crudos (sensores, registros de ventas, logs de mantenimiento) en insights accionables mediante modelos predictivos y visualizaciones avanzadas.
-para mas información y busqueda de repositorios pueden entrar a mi link  [[Repositorio]](https://github.com/mariobrenesarroyo/Analisis-de-Datos)
-
-* **Enfoque de Analista:** Visualización estratégica, limpieza de datos y reporte de KPIs de negocio.
-* **Enfoque de Data Scientist:** Modelado estadístico, Machine Learning (Supervisado/No Supervisado) y despliegue de soluciones en la nube.
+Welcome to my professional portfolio! I am an advanced student of **Electrical Engineering** at the University of Costa Rica, with a solid specialization in Data Science for leveraging data for industrial optimization and strategic decision-making.
 
 ---
 
-## 🛠️ Proyectos de Data Science (Machine Learning)
+## 🎯 Professional Profile
+Specialist at the intersection of **hardware engineering** and **software analysis**. Expert in transforming large volumes of raw data (sales records, sensor data, maintenance logs) into actionable insights through predictive models and advanced visualizations.
+For more information and repository search, you can visit my link [[Repository]](https://github.com/mariobrenesarroyo/Analisis-de-Datos)
 
-En esta sección presento soluciones basadas en algoritmos para predecir comportamientos y optimizar procesos.
-
-### [Análisis de Product Testing & Confiabilidad](./proyectos_ciencia_de_datos/Product_testing/Product_testing.md)
-* **Problema:** Clasificación de fallas en circuitos electrónicos con datos altamente desbalanceados.
-* **Solución:** Implementación de **SMOTE** para balanceo de clases y entrenamiento de modelos de clasificación.
-* **Impacto Industrial:** Cálculo de **MTBF** y **MTTR** para la mejora de la mantenibilidad en planta.
-
-### [Predicción de Evasión de Clientes (Churn)](./proyectos_ciencia_de_datos/Evacion_clientes/evasion_clientes.md)
-* Uso de modelos para identificar patrones de abandono de usuarios y proponer estrategias de retención.
+* **Analyst Focus:** Strategic visualization, data cleaning, and business KPI reporting.
+* **Data Scientist Focus:** Statistical modeling, Machine Learning (Supervised/Unsupervised), and cloud solution deployment.
 
 ---
 
-## 📊 Proyectos de Data Analytics & Dashboards
+## 🛠️ Data Science Projects (Machine Learning)
 
-Análisis descriptivo y diagnóstico para la comprensión del desempeño histórico y actual.
+In this section, I present solutions based on algorithms to predict behaviors and optimize processes.
 
-### [Dashboards de Ventas y Tech Sales](./proyectos_analisis_de_datos/tech_sales/tech_sales.md)
-* Visualización interactiva en **Power BI** para el seguimiento de cuotas de ventas, márgenes de ganancia y rendimiento por región.
+### [Product Testing & Reliability Analysis](./proyectos_ciencia_de_datos/Product_testing/Product_testing.md)
+* **Problem:** Classification of failures in electronic circuits with highly imbalanced data.
+* **Solution:** Implementation of **SMOTE** for class balancing and training classification models.
+* **Industrial Impact:** Calculation of **MTBF** and **MTTR** for improving maintainability in the plant.
 
-### [Análisis de Operaciones y Mantenimiento](./proyectos_analisis_de_datos/mantenimiento_industrial/mantenimiento_industrial.md)
-* Reportes de disponibilidad de activos y eficiencia operativa (OEE).
-
-## [Análisis para recursos humanos](./proyectos_analisis_de_datos/Recursos_humanos/Recursos_humanos.md)
-* Este proyecto tiene como objetivo desarrollar un **dashboard** interactivo y fácil de usar para la gestión de recursos humanos. El **dashboard** proporcionará una vista comprensiva de los datos de empleados, evaluaciones y sueldos, permitiendo a los administradores tomar decisiones informadas y mejorar la gestión del personal.
+### [Customer Churn Prediction](./proyectos_ciencia_de_datos/Evacion_clientes/evasion_clientes.md)
+* Use of models to identify user abandonment patterns and propose retention strategies.
 
 ---
 
-## 🧠 Habilidades Técnicas
+## 📊 Data Analytics & Dashboards Projects
 
-| Área | Tecnologías |
+Descriptive and diagnostic analysis for understanding historical and current performance.
+
+### [Sales and Tech Sales Dashboards](./proyectos_analisis_de_datos/tech_sales/tech_sales.md)
+* Interactive visualization in **Power BI** for tracking sales quotas, profit margins, and regional performance.
+
+### [Operations and Maintenance Analysis](./proyectos_analisis_de_datos/mantenimiento_industrial/mantenimiento_industrial.md)
+* Asset availability reports and operational efficiency (OEE).
+
+## [Human Resources Analysis](./proyectos_analisis_de_datos/Recursos_humanos/Recursos_humanos.md)
+* This project aims to develop an **interactive** and easy-to-use dashboard for human resources management. The **dashboard** will provide a comprehensive view of employee data, evaluations, and salaries, allowing administrators to make informed decisions and improve personnel management.
+
+---
+
+## 🧠 Technical Skills
+
+| Area | Technologies |
 | :--- | :--- |
-| **Lenguajes** | Python (Pandas, Scikit-Learn, Seaborn), SQL, MATLAB |
-| **Herramientas BI** | Power BI, Tableau, Excel Avanzado |
-| **Ingeniería** | Simulink, SCADA, Análisis de Sistemas de Potencia |
-| **Entorno Dev** | Linux (WSL), Git/GitHub, Docker, MkDocs |
+| **Languages** | Python (Pandas, Scikit-Learn, Seaborn), SQL, MATLAB |
+| **BI Tools** | Power BI, Tableau, Advanced Excel |
+| **Engineering** | Simulink, SCADA, Power Systems Analysis |
+| **Dev Environment** | Linux (WSL), Git/GitHub, Docker, MkDocs |
 
 ---
 
-## 📫 Contacto
-¿Interesado en colaborar o conocer más sobre mi perfil?
+## 📫 Contact
+Interested in collaborating or learning more about my profile?
 * **LinkedIn:** [[LinkedIn]](https://www.linkedin.com/in/mario-enrique2903/)
 * **Email:** marioucrtec@gmail.com
-* **Ubicación:** San José, Costa Rica
+* **Location:** San José, Costa Rica

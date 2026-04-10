@@ -9,10 +9,10 @@ theme:
     - navigation.sections
 
 nav:
-  - Inicio: index.md
-  - Proyectos Ciencia de Datos:
+  - Home: index.md
+  - Data Science Projects:
       - Product Testing: proyectos_ciencia_de_datos/Product_testing/Product_testing.md
-      - Evasión de Clientes: proyectos_ciencia_de_datos/Evacion_clientes/evasion_clientes.md
-  - Proyectos Análisis de Datos:
-    - Recursos Humanos: proyectos_analisis_de_datos/Recursos_humanos/Recursos_humanos.md
+      - Customer Churn: proyectos_ciencia_de_datos/Evacion_clientes/evasion_clientes.md
+  - Data Analysis Projects:
+    - Human Resources: proyectos_analisis_de_datos/Recursos_humanos/Recursos_humanos.md
     - Tech Sales: proyectos_analisis_de_datos/tech_sales/tech_sales.md

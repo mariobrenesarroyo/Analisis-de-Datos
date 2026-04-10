@@ -1,139 +1,140 @@
-# Product Testing - Análisis de Calidad y Clasificación Predictiva
+# Product Testing - Quality Analysis and Predictive Classification
 
-Este repositorio contiene un análisis integral de control de calidad para productos industriales. El proyecto abarca desde la ingeniería de datos hasta la implementación de modelos de Machine Learning para predecir fallas, abordando desafíos comunes como el desbalance de clases.
+This repository contains a comprehensive quality control analysis for industrial products. The project spans from data engineering to the implementation of Machine Learning models to predict failures, addressing common challenges like class imbalance.
 
-## 📊 Flujo del Proyecto
+## 📊 Project Flow
 
-### 1. Limpieza y Preparación de Datos
+### 1. Data Cleaning and Preparation
 
-Esta etapa fue crítica para transformar un dataset de pruebas técnico (con formatos inconsistentes) en un conjunto de datos apto para modelos de Machine Learning. 
+This stage was critical to transform a technical test dataset (with inconsistent formats) into a dataset suitable for Machine Learning models.
 
-#### **Flujo de Procesamiento Técnico:**
+#### **Technical Processing Flow:**
 
-* **Identificación y Casting de Tipos:** Los datos de entrada presentaban columnas de tipo `object` (strings) debido a unidades de medida y formatos de texto. 
-    * Se aplicó `pd.to_numeric(errors='coerce')` para forzar la conversión a `float64`. 
-    * Cualquier valor no numérico o malformado fue transformado automáticamente en **NaN**, permitiendo una limpieza estandarizada.
-* **Gestión de Valores Faltantes (NaN):** * Tras la conversión a tipos numéricos, se ejecutó `df.dropna()` para eliminar registros incompletos.
-    * Este enfoque de "eliminación por filas" aseguró que el modelo no fuera entrenado con datos sesgados o imputaciones artificiales en variables de sensores críticos.
-* **Ingeniería de Datetime:** * Se estandarizó la columna temporal a formato `datetime64`.
-    * Esto permitió organizar cronológicamente las pruebas y asegurar que la limpieza de nulos no afectara la continuidad de la serie de datos.
-* **Normalización y Escalamiento:** * Para que algoritmos como **SMOTE** y las **Matrices de Confusión** funcionen correctamente, se aplicó un escalamiento de características. 
-    * Esto igualó la magnitud de todas las variables (F1, F2, F3, etc.), evitando que los valores de mayor escala dominaran erróneamente el aprendizaje del modelo. 
+* **Type Identification and Casting:** The input data had columns of type `object` (strings) due to measurement units and text formats.
+    * `pd.to_numeric(errors='coerce')` was applied to force conversion to `float64`.
+    * Any non-numeric or malformed value was automatically transformed into **NaN**, allowing for standardized cleaning.
+* **Missing Values Management (NaN):** * After conversion to numeric types, `df.dropna()` was executed to remove incomplete records.
+    * This "row deletion" approach ensured the model would not be trained with biased data or artificial imputations on critical sensor variables.
+* **Datetime Engineering:** * The temporal column was standardized to `datetime64` format.
+    * This allowed organizing the tests chronologically and ensuring that null cleaning did not affect the data series continuity.
+* **Normalization and Scaling:** * For algorithms like **SMOTE** and **Confusion Matrices** to work correctly, feature scaling was applied.
+    * This equalized the magnitude of all variables (F1, F2, F3, etc.), preventing larger scale values from erroneously dominating the model's learning.
 
-| Estado Inicial (Raw) | Post-Casting y Limpieza | Post-Normalización |
+| Initial State (Raw) | Post-Casting and Cleaning | Post-Normalization |
 | :---: | :---: | :---: |
 | ![Initial Head](../imagenes/df_initial_head.png) | ![Post Clean](../imagenes/df_post_nan_cleaning.png) | ![Post Norm](../imagenes/df_post_normalization.png) |
 
-### 2. Análisis Exploratorio (EDA)
-Se analizaron las distribuciones de las variables clave (F2, F3) y el comportamiento de los KPIs para entender qué parámetros afectan la calidad del producto.
+### 2. Exploratory Data Analysis (EDA)
+The distributions of key variables (F2, F3) and KPI behavior were analyzed to understand which parameters affect product quality.
 
-* **Distribuciones Técnicas:**
+* **Technical Distributions:**
   ![Distribución F2](../imagenes/distribution_F2.png) ![Distribución F3](../imagenes/distribution_F3.png)
-* **Análisis de KPIs y Resultados:**
-  ![Distribución Result](../imagenes/distribution_result.png) ![KPI Distributions](../imagenes/kpi_distributions.png)
+* **KPI and Results Analysis:**
+  ![Distribución Result](../imagenes/distribution_result.png) 
 
-### 3. Análisis de Correlación Multivariada
+### 3. Multivariate Correlation Analysis
 
-Se generó un mapa de calor (Heatmap) utilizando el **Coeficiente de Correlación de Pearson ($r$)** para identificar las relaciones lineales entre los diferentes sensores y parámetros de prueba del producto. Esta visualización es fundamental para detectar redundancias y entender qué variables influyen en el resultado final.
+A heatmap was generated using the **Pearson Correlation Coefficient ($r$)** to identify linear relationships between different sensors and product test parameters. This visualization is essential for detecting redundancies and understanding which variables influence the final result.
 
-#### **Interpretación Técnica de la Matriz:**
+#### **Technical Interpretation of the Matrix:**
 
-El mapa utiliza una escala cromática divergente que permite diagnosticar el comportamiento del sistema de sensores de un vistazo:
+The map uses a divergent color scale that allows diagnosing sensor system behavior at a glance:
 
-* **Rojo Intenso (Correlación Positiva, $r \to 1$):** Indica una relación directa. Cuando el valor de un sensor aumenta, el otro también lo hace. En este dataset, las zonas rojas fuera de la diagonal principal sugieren **redundancia de datos**, donde dos sensores capturan fenómenos físicos similares.
-* **Azul Intenso (Correlación Negativa, $r \to -1$):** Indica una relación inversa. Un incremento en una variable predice una disminución en la otra. Esto es común en sistemas con lazos de control donde una acción correctiva busca estabilizar un parámetro.
-* **Blanco o Tonos Claros (Independencia, $r \to 0$):** Indica que las variables son linealmente independientes. El comportamiento de un sensor no explica en absoluto el del otro.
+* **Intense Red (Positive Correlation, $r \to 1$):** Indicates a direct relationship. When one sensor value increases, the other also does. In this dataset, red zones outside the main diagonal suggest **data redundancy**, where two sensors capture similar physical phenomena.
+* **Intense Blue (Negative Correlation, $r \to -1$):** Indicates an inverse relationship. An increase in one variable predicts a decrease in the other. This is common in systems with control loops where a corrective action seeks to stabilize a parameter.
+* **White or Light Tones (Independence, $r \to 0$):** Indicates that variables are linearly independent. The behavior of one sensor does not explain the other at all.
 
-#### **Hallazgos Clave:**
+#### **Key Findings:**
 
-1.  **Complejidad del Fallo:** La baja correlación (tonos claros) entre la mayoría de los sensores y la variable objetivo `Result` confirma que la falla no es causada por un solo factor lineal. Esto justifica el uso de modelos de **Machine Learning** no lineales para capturar patrones complejos.
-2.  **Optimización de Features:** Identificar pares de variables con correlación muy alta ($>0.9$) permite considerar la eliminación de una de ellas en futuras iteraciones para reducir el costo computacional sin perder precisión.
-3.  **Integridad de Datos:** La generación exitosa de esta matriz valida que el proceso previo de **Casting de datos** (de `object` a `float`) y la limpieza de valores **NaN** se realizaron correctamente, permitiendo el cálculo matemático sobre todas las dimensiones del dataset.
+1.  **Failure Complexity:** The low correlation (light tones) between most sensors and the target variable `Result` confirms that failure is not caused by a single linear factor. This justifies the use of non-linear **Machine Learning** models to capture complex patterns.
+2.  **Feature Optimization:** Identifying variable pairs with very high correlation ($>0.9$) allows considering the elimination of one of them in future iterations to reduce computational cost without losing precision.
+3.  **Data Integrity:** The successful generation of this matrix validates that the prior **Data Casting** process (from `object` to `float`) and **NaN** value cleaning were performed correctly, allowing mathematical calculation across all dimensions of the dataset.
 
 ![Correlation Heatmap](../imagenes/correlation_heatmap.png)
 
-### 5. Comparativa de Métricas de Rendimiento
+### 5. Performance Metrics Comparison
 
-Para validar la eficacia de cada estrategia de muestreo, se extrajeron las métricas clave de los informes de clasificación. Dado que el objetivo es el control de calidad industrial, el foco principal se puso en el **Recall** de la clase defectuosa.
+To validate the effectiveness of each sampling strategy, key metrics were extracted from the classification reports. Since the objective is industrial quality control, the main focus was placed on the **Recall** of the defective class.
 
-| Estrategia | Clase | Precision | Recall | F1-Score | Accuracy Global |
+| Strategy | Class | Precision | Recall | F1-Score | Global Accuracy |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Original** | Defectuoso | 0.00 | 0.00 | 0.00 | **92%** |
-| | Aprobado | 0.92 | 1.00 | 0.96 | |
-| **RUS** | Defectuoso | 0.28 | 0.82 | 0.42 | **74%** |
-| | Aprobado | 0.98 | 0.73 | 0.84 | |
-| **SMOTE** | Defectuoso | 0.45 | 0.78 | 0.57 | **86%** |
-| | Aprobado | 0.98 | 0.88 | 0.93 | |
+| **Original** | Defective | 0.00 | 0.00 | 0.00 | **92%** |
+| | Passed | 0.92 | 1.00 | 0.96 | |
+| **RUS** | Defective | 0.28 | 0.82 | 0.42 | **74%** |
+| | Passed | 0.98 | 0.73 | 0.84 | |
+| **SMOTE** | Defective | 0.45 | 0.78 | 0.57 | **86%** |
+| | Passed | 0.98 | 0.88 | 0.93 | |
 
-#### **Análisis de los Resultados:**
+#### **Results Analysis:**
 
-1.  **La Trampa del Accuracy:** El modelo **Original** tiene un 92% de accuracy, pero un **Recall de 0%** para productos defectuosos. Esto significa que el modelo "engaña" al parecer bueno, pero en realidad no detecta ninguna falla (las ignora por completo debido al desbalance).
-2.  **El Compromiso de RUS:** Logró el mejor **Recall (0.82)**, detectando la mayoría de las fallas, pero su **Precision** cayó drásticamente (0.28). Esto generaría demasiadas "falsas alarmas" en la línea de producción, deteniendo el proceso innecesariamente.
-3.  **El Equilibrio de SMOTE:** Se seleccionó como la mejor técnica porque logró un **Recall sólido (0.78)** manteniendo un **F1-Score mucho más alto (0.57)** que RUS. Esto permite detectar fallas de manera confiable sin saturar al equipo de mantenimiento con falsos positivos.
+1.  **The Accuracy Trap:** The **Original** model has 92% accuracy, but a **Recall of 0%** for defective products. This means the model "cheats" by appearing good, but actually detects no failures (it ignores them completely due to the imbalance).
+2.  **The RUS Trade-off:** It achieved the best **Recall (0.82)**, detecting most failures, but its **Precision** dropped drastically (0.28). This would generate too many "false alarms" on the production line, stopping the process unnecessarily.
+3.  **The SMOTE Balance:** It was selected as the best technique because it achieved a solid **Recall (0.78)** while maintaining a much higher **F1-Score (0.57)** than RUS. This allows detecting failures reliably without flooding the maintenance team with false positives.
 
-#### **Visualización Final de Resultados:**
+#### **Final Results Visualization:**
 
-La mejora en la capacidad de detección se evidencia al comparar las matrices de confusión, donde SMOTE logra "iluminar" la diagonal de predicciones correctas para la clase minoritaria:
+The improvement in detection capability is evident when comparing confusion matrices, where SMOTE manages to "illuminate" the correct predictions diagonal for the minority class:
 
 ![Comparison](../imagenes/confusion_matrices_comparison.png)
 
-### 📈 Conclusión del Proyecto
-El análisis demuestra que mediante el uso de **SMOTE** y un preprocesamiento riguroso de datos de sensores, es posible construir un sistema de alerta temprana que identifique el **78% de los productos defectuosos** antes de que salgan de la planta, optimizando los KPIs de calidad y reduciendo costos operativos.
-## 🛠️ Herramientas
-* **Análisis:** Python (Pandas, NumPy) 
-* **Visualización:** Matplotlib, Seaborn 
-* **ML:** Scikit-learn (SMOTE, RUS, Modelos de Clasificación) 
+### 📈 Project Conclusion
+The analysis demonstrates that through the use of **SMOTE** and rigorous sensor data preprocessing, it is possible to build an early warning system that identifies **78% of defective products** before they leave the plant, optimizing quality KPIs and reducing operational costs.
+
+## 🛠️ Tools
+* **Analysis:** Python (Pandas, NumPy)
+* **Visualization:** Matplotlib, Seaborn
+* **ML:** Scikit-learn (SMOTE, RUS, Classification Models)
 
 
-### 6. Análisis de Confiabilidad y Mantenibilidad (KPIs Industriales)
+### 6. Reliability and Maintainability Analysis (Industrial KPIs)
+![KPI Distributions](../imagenes/kpi_distributions.png)
 
-En esta fase final, el proyecto trasciende el análisis de datos puro para entrar en el dominio de la **Ingeniería de Confiabilidad**. Se utilizaron los registros de fallas para calcular métricas que determinan la salud operativa de la línea de producción.
+In this final phase, the project transcends pure data analysis to enter the domain of **Reliability Engineering**. Failure records were used to calculate metrics that determine the operational health of the production line.
 
-#### **Interpretación de kpi_distributions.png**
+#### **Interpretation of kpi_distributions.png**
 
-La visualización de las distribuciones de KPIs es fundamental para entender el comportamiento estadístico de los activos. Aquí se explica cómo interpretar cada gráfico:
+Visualizing KPI distributions is essential to understand the statistical behavior of assets. Here is how to interpret each graph:
 
-1.  **Distribución de MTBF (Confiabilidad):** * **Qué buscar:** Una distribución desplazada hacia la derecha es ideal, ya que indica tiempos largos entre fallas.
-    * **Análisis:** 
-        * **Diagnóstico:** El intervalo entre fallas es bajo y disperso (máximo 16 horas). Esto indica que el sistema no logra alcanzar un estado de régimen permanente antes de fallar nuevamente, sugiriendo fatiga prematura de componentes o descalibración por deriva térmica (*Sensor Drift*).
-        * **Interpretación:** La baja frecuencia en rangos altos confirma que las fallas son aleatorias, lo cual es típico de entornos con alto ruido eléctrico o inconsistencia en la calidad de los materiales.
+1.  **MTBF (Reliability) Distribution:** * **What to look for:** A distribution shifted to the right is ideal, as it indicates long times between failures.
+    * **Analysis:**
+        * **Diagnosis:** The interval between failures is low and dispersed (maximum 16 hours). This indicates the system does not achieve a steady-state condition before failing again, suggesting premature component fatigue or descalibration due to thermal drift (*Sensor Drift*).
+        * **Interpretation:** The low frequency in high ranges confirms that failures are random, which is typical in environments with high electrical noise or inconsistency in material quality.
 
-2.  **Distribución de MTTR (Mantenibilidad):**
-    * **Qué buscar:** Una distribución estrecha y desplazada hacia la izquierda (cerca del cero).
-    * **Análisis:** 
-        * **Diagnóstico:** Un MTTR cercano a cero es, irónicamente, una señal de alerta. Indica que las reparaciones son superficiales (como reinicios de software o ajustes rápidos) en lugar de intervenciones sobre la causa raíz. 
-        * **Interpretación:** El personal técnico logra restablecer el sistema rápido, pero al no corregir el origen físico del fallo, el ciclo de error se repite constantemente, degradando el MTBF.
-    
+2.  **MTTR (Maintainability) Distribution:**
+    * **What to look for:** A narrow distribution shifted to the left (near zero).
+    * **Analysis:**
+        * **Diagnosis:** An MTTR close to zero is, ironically, a warning sign. It indicates that repairs are superficial (like software restarts or quick adjustments) instead of interventions on the root cause.
+        * **Interpretation:** Technical staff manage to restore the system quickly, but by not correcting the physical origin of the failure, the error cycle repeats constantly, degrading the MTBF.
 
-3.  **Distribución de Disponibilidad:**
-    * **Análisis:** Refleja el porcentaje de tiempo que el sistema de pruebas estuvo operativo. Los valores atípicos (outliers) en la parte baja de la escala señalan periodos de crisis operativa donde la acumulación de fallas detuvo la línea de producción.
-        * **Diagnóstico:** La disponibilidad operativa se encuentra sesgada hacia el rango 0-0.2. A pesar de la rapidez de las reparaciones (MTTR bajo), la alta frecuencia de interrupciones (MTBF bajo) mantiene la línea de producción detenida la mayor parte del tiempo.
-        * **Impacto:** Este nivel de disponibilidad genera cuellos de botella críticos y elevados costos por paradas no programadas.
-#### **¿Por qué son importantes estos análisis?**
+3.  **Availability Distribution:**
+    * **Analysis:** Reflects the percentage of time the test system was operational. Outliers at the low end of the scale indicate operational crisis periods where failure accumulation stopped the production line.
+        * **Diagnosis:** Operational availability is skewed toward the 0-0.2 range. Despite the speed of repairs (low MTTR), the high frequency of interruptions (low MTBF) keeps the production line stopped most of the time.
+        * **Impact:** This level of availability generates critical bottlenecks and high costs from unscheduled stops.
+#### **Why are these analyses important?**
 
-* **Identificación de "Bad Actors":** Permite localizar qué números de serie o lotes específicos están degradando el MTBF promedio.
-* **Optimización de Recursos:** Al conocer el MTTR promedio, la gerencia puede planificar mejor los turnos de trabajo y el stock de componentes de reemplazo (F1...Fn).
-* **Predicción de Riesgos:** Un cambio en la tendencia de estas distribuciones sirve como un sistema de alerta temprana ante una posible degradación en la calidad de los materiales recibidos.
+* **"Bad Actors" Identification:** Allows locating which serial numbers or specific batches are degrading the average MTBF.
+* **Resource Optimization:** By knowing the average MTTR, management can better plan work shifts and replacement component stock (F1...Fn).
+* **Risk Prediction:** A change in the trend of these distributions serves as an early warning system for possible degradation in received material quality.
 
 ![KPI Distributions](../imagenes/kpi_distributions.png)
 
-###  Estrategia de Solución Propuesta
+### Proposed Solution Strategy
 
-Para revertir estos indicadores, se propone una transición de mantenimiento correctivo a **Predictivo basado en Datos**:
+To reverse these indicators, a transition from corrective maintenance to **Data-Based Predictive Maintenance** is proposed:
 
-1.  **Monitoreo de Supervivencia:** Implementar alertas de mantenimiento preventivo obligatorias a las 10-12 horas de operación para realizar limpiezas y calibraciones antes de que el sistema alcance el umbral crítico de falla (16h).
-2.  **Filtrado por Machine Learning:** Utilizar el modelo de clasificación entrenado (SMOTE) para identificar las variables de sensores que presentan anomalías *antes* de la falla, permitiendo una intervención proactiva.
-3.  **Auditoría de Causa Raíz (RCA):** Estandarizar los protocolos de reparación para asegurar que cada intervención elimine el problema de raíz y no solo restablezca el sistema momentáneamente, buscando elevar el MTBF por encima de las 100 horas.
+1. **Survival Monitoring:** Implement mandatory preventive maintenance alerts at 10-12 hours of operation to perform cleanings and calibrations before the system reaches the critical failure threshold (16h).
+2. **Machine Learning Filtering:** Use the trained classification model (SMOTE) to identify sensor variables that present anomalies *before* failure, allowing proactive intervention.
+3. **Root Cause Audit (RCA):** Standardize repair protocols to ensure each intervention eliminates the root problem and not just restores the system momentarily, seeking to raise MTBF above 100 hours.
 
-> **Conclusión Técnica:** La integración de estos KPIs con el modelo de Machine Learning permite no solo saber *si* un producto fallará (Predicción), sino también *qué impacto* tendrá esa falla en la productividad global de la planta (Gestión).
-
----
-
-## 🚀 Conclusión
-Este proyecto integra la **Ciencia de Datos** con la **Ingeniería Eléctrica**, proporcionando una herramienta capaz de predecir fallas con un **78% de sensibilidad (Recall)** y monitorear la salud operativa de la línea de producción mediante métricas de mantenimiento industrial.
+> **Technical Conclusion:** The integration of these KPIs with the Machine Learning model allows not only knowing *if* a product will fail (Prediction), but also *what impact* that failure will have on the plant's overall productivity (Management).
 
 ---
-**Autor:** Mario Enrique Brenes Arroyo
+
+## 🚀 Conclusion
+This project integrates **Data Science** with **Electrical Engineering**, providing a tool capable of predicting failures with **78% sensitivity (Recall)** and monitoring the operational health of the production line through industrial maintenance metrics.
+
 ---
-**Autor:** Mario Enrique Brenes Arroyo 
-**Contacto:** [LinkedIn](https://www.linkedin.com/in/mariobrenes) | marioucrtec@gmail.com
+**Author:** Mario Enrique Brenes Arroyo
+---
+**Author:** Mario Enrique Brenes Arroyo
+**Contact:** [LinkedIn](https://www.linkedin.com/in/mariobrenes) | marioucrtec@gmail.com

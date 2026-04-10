@@ -1,67 +1,67 @@
-# Estrategia Predictiva para la Retención de Clientes - Telecom X
+# Predictive Strategy for Customer Retention - Telecom X
 
-## 1. Introducción y Misión del Proyecto
-La misión principal de este proyecto es desarrollar modelos de **Aprendizaje Automático (Machine Learning)** capaces de prever qué clientes tienen una mayor probabilidad de cancelar sus servicios en la empresa **Telecom X**. El objetivo es anticiparse al abandono mediante un pipeline robusto de modelado que permita a la empresa tomar acciones preventivas basadas en datos.
+## 1. Introduction and Project Mission
+The main mission of this project is to develop **Machine Learning** models capable of predicting which customers are more likely to cancel their services at company **Telecom X**. The objective is to anticipate churn through a robust modeling pipeline that allows the company to take preventive actions based on data.
 
-## 2. Objetivos del Desafío
-* **Implementar el Churn como métrica central:** Definir si un cliente ha abandonado o no el programa de fidelidad.
-* **Preparación de Datos:** Realizar el tratamiento, codificación (OneHotEncoding) y normalización de las variables.
-* **Análisis y Selección:** Identificar correlaciones críticas entre las variables de servicio y la cancelación.
-* **Modelado y Evaluación:** Entrenar modelos de clasificación y evaluar su desempeño mediante métricas de precisión, recall y exactitud.
+## 2. Challenge Objectives
+* **Implement Churn as the central metric:** Define whether a customer has abandoned the loyalty program or not.
+* **Data Preparation:** Perform treatment, encoding (OneHotEncoding), and normalization of variables.
+* **Analysis and Selection:** Identify critical correlations between service variables and cancellation.
+* **Modeling and Evaluation:** Train classification models and evaluate their performance using precision, recall, and accuracy metrics.
 
-## 3. Descripción de los Datos
-El conjunto de datos original contiene información detallada sobre los servicios contratados, datos demográficos y facturación de **7,032 clientes**.
+## 3. Data Description
+The original dataset contains detailed information about contracted services, demographics, and billing for **7,032 customers**.
 
-### Columnas Principales y Tipos de Datos:
-* **Variables Categóricas:** Incluyen `PhoneService`, `MultipleLines`, `InternetService`, `OnlineSecurity`, `Contract`, `PaymentMethod`, entre otras.
-* **Variables Numéricas:** `tenure` (antigüedad), `Charges.Monthly` (cargos mensuales), `Charges.Total` (cargos totales) y `Months_Paid`.
-* **Variable Objetivo:** `Churn` (Binaria: Yes/No), que indica la fuga del cliente.
+### Main Columns and Data Types:
+* **Categorical Variables:** Include `PhoneService`, `MultipleLines`, `InternetService`, `OnlineSecurity`, `Contract`, `PaymentMethod`, among others.
+* **Numeric Variables:** `tenure` (tenure), `Charges.Monthly` (monthly charges), `Charges.Total` (total charges), and `Months_Paid`.
+* **Target Variable:** `Churn` (Binary: Yes/No), indicating customer churn.
 
-## 4. Análisis Exploratorio (EDA)
-Durante la exploración, se identificó que el dataset presentaba un desbalanceo inicial: un **73.4%** de clientes activos frente a un **26.6%** que cancelaron. Para corregir esto y mejorar el entrenamiento, se aplicó la técnica **SMOTE**, logrando una distribución equilibrada del 50/50.
+## 4. Exploratory Data Analysis (EDA)
+During exploration, it was identified that the dataset had an initial imbalance: **73.4%** active customers versus **26.6%** who cancelled. To correct this and improve training, the **SMOTE** technique was applied, achieving a balanced 50/50 distribution.
 
-![Correlación de Variables](images/Correlación_de_Variables_con_Churn.png)
-*Visualización de las variables con mayor impacto positivo y negativo en la cancelación.*
+![Correlation of Variables](images/Correlación_de_Variables_con_Churn.png)
+*Visualization of variables with the highest positive and negative impact on cancellation.*
 
-### Hallazgos Clave:
-* **Contratos Mensuales:** Los clientes con contrato "Month-to-month" tienen una tendencia significativamente mayor al abandono.
-* **Cargos Totales:** Existe una relación clara entre el tiempo de permanencia y el gasto total acumulado como factor de retención.
+### Key Findings:
+* **Monthly Contracts:** Customers with "Month-to-month" contracts have a significantly higher tendency to churn.
+* **Total Charges:** There is a clear relationship between tenure time and total accumulated spending as a retention factor.
 
-![Distribución de Cargos](images/Charges.Total%20por%20tipo%20de%20contrato%20y%20Churn.png)
-*Análisis de cargos totales segmentados por tipo de contrato.*
+![Charges Distribution](images/Charges.Total%20por%20tipo%20de%20contrato%20y%20Churn.png)
+*Analysis of total charges segmented by contract type.*
 
-![Relación Meses vs Cargos](images/Relación%20Months_Paid%20vs%20Charges.Total%20por%20tipo%20de%20contrato%20y%20cancelación.png)
-*Dispersión de pagos a lo largo del tiempo según el estado de Churn.*
+![Relationship Months vs Charges](images/Relación%20Months_Paid%20vs%20Charges.Total%20por%20tipo%20de%20contrato%20y%20cancelación.png)
+*Scatter plot of payments over time according to Churn status.*
 
-## 5. Creación y Evaluación de Modelos
-Se implementaron dos algoritmos con enfoques distintos:
-1.  **Árbol de Decisión:** Valorado por su alta explicabilidad y rapidez, operando mediante reglas lógicas de decisión.
-2.  **KNN (K-Nearest Neighbors):** Basado en la distancia y similitud entre registros, requiriendo normalización previa de los datos.
+## 5. Model Creation and Evaluation
+Two algorithms with different approaches were implemented:
+1.  **Decision Tree:** Valued for its high explainability and speed, operating through logical decision rules.
+2.  **KNN (K-Nearest Neighbors):** Based on distance and similarity between records, requiring prior normalization of the data.
 
-![Gráfico del Árbol](images/grafico%20del%20modelo%20de%20mi%20arbol%20de%20desición.png)
-*Estructura lógica de las decisiones tomadas por el algoritmo del árbol.*
+![Tree Diagram](images/grafico%20del%20modelo%20de%20mi%20arbol%20de%20desición.png)
+*Logical structure of decisions made by the tree algorithm.*
 
-### Comparativa de Métricas:
+### Metrics Comparison:
 
-| Métrica | Árbol de Decisión | Modelo KNN |
+| Metric | Decision Tree | KNN Model |
 | :--- | :--- | :--- |
-| **Exactitud (Accuracy)** | **0.8096** | 0.7760 |
-| **Precisión** | **0.8131** | 0.7184 |
-| **Recall (Sensibilidad)** | 0.7894 | **0.8864** |
+| **Accuracy** | **0.8096** | 0.7760 |
+| **Precision** | **0.8131** | 0.7184 |
+| **Recall (Sensitivity)** | 0.7894 | **0.8864** |
 
 
 
-### Matrices de Confusión:
-Estas matrices permiten visualizar los aciertos y errores (falsos positivos/negativos) de cada modelo:
+### Confusion Matrices:
+These matrices allow visualizing the hits and errors (false positives/negatives) of each model:
 
-![Matriz Árbol](images/Matriz%20de%20Confusión%20-%20Árbol%20de%20Decisión.png)
-![Matriz KNN](images/Matriz%20de%20Confusión%20-%20Modelo%20KNN.png)
+![Tree Matrix](images/Matriz%20de%20Confusión%20-%20Árbol%20de%20Decisión.png)
+![KNN Matrix](images/Matriz%20de%20Confusión%20-%20Modelo%20KNN.png)
 
-## 6. Conclusión: ¿Qué modelo ganó?
+## 6. Conclusion: Which model won?
 
-Aunque el **Árbol de Decisión** presenta una mayor **Exactitud (80.96%)** y **Precisión (81.31%)**, el modelo **ganador para los objetivos de Telecom X es el KNN**.
+Although the **Decision Tree** presents higher **Accuracy (80.96%)** and **Precision (81.31%)**, the **winner model for Telecom X's objectives is KNN**.
 
-### ¿Por qué KNN?
-* **Mayor Recall (88.64%):** En un problema de fuga de clientes, el costo de "perder" a un cliente que realmente se iba a ir (Falso Negativo) es mucho más alto que el de contactar a un cliente que quizás no se iba.
-* **Capacidad de Detección:** El modelo KNN demostró una capacidad superior para identificar correctamente a los clientes en riesgo de cancelación, cumpliendo con la misión de anticiparse al problema de manera más efectiva.
-* **Variables Críticas:** El análisis de vecinos cercanos confirmó que factores como `Dependents`, `PaperlessBilling` y `Contract` son altamente discriminativos para determinar la similitud entre clientes que abandonan.
+### Why KNN?
+* **Higher Recall (88.64%):** In a customer churn problem, the cost of "losing" a customer who was actually going to leave (False Negative) is much higher than contacting a customer who might not have left.
+* **Detection Capability:** The KNN model demonstrated a superior ability to correctly identify customers at risk of cancellation, fulfilling the mission of anticipating the problem more effectively.
+* **Critical Variables:** The nearest neighbors analysis confirmed that factors such as `Dependents`, `PaperlessBilling`, and `Contract` are highly discriminative for determining similarity between customers who churn.
